@@ -46,3 +46,9 @@ console.log(nameLengths);
 // 4
 const sortedProvinces = [...provinces].sort(); // Using spread operator to avoid mutating the original array.
 console.log(sortedProvinces);
+
+// 5
+const nonCapeProvinces = provinces.filter(
+  (province) => !province.includes("Cape")
+);
+console.log(`${nonCapeProvinces.length} provinces with out Cape remaining`);
