@@ -68,3 +68,6 @@ console.log(nameProvinceMapping);
 
 // 1
 console.log(products.map((product) => product.product).join(", "));
+
+// 2
+console.log(products.filter((product) => product.product.length <= 5));
