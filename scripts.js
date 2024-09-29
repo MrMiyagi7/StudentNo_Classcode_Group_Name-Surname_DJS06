@@ -34,3 +34,7 @@ const products = [
 provinces.forEach((province, index) =>
   console.log(`${names[index]} (${province})`)
 );
+
+// 2
+const upperProvinces = provinces.map((province) => province.toUpperCase());
+console.log(upperProvinces);
