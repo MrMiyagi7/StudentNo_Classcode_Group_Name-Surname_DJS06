@@ -52,3 +52,7 @@ const nonCapeProvinces = provinces.filter(
   (province) => !province.includes("Cape")
 );
 console.log(`${nonCapeProvinces.length} provinces with out Cape remaining`);
+
+// 6
+const containsS = names.map((name) => name.toLowerCase().includes("s"));
+console.log(containsS);
