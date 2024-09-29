@@ -71,3 +71,13 @@ console.log(products.map((product) => product.product).join(", "));
 
 // 2
 console.log(products.filter((product) => product.product.length <= 5));
+
+// 3
+console.log(
+  products
+    .filter(
+      (product) => String(product.price).trim() !== "" && !isNaN(product.price)
+    ) // Convert price to string first
+    .map((product) => ({ ...product, price: Number(product.price) })) // Convert valid prices to numbers
+    .reduce((total, product) => total + product.price, 0) // Calculate total price
+);
