@@ -99,3 +99,11 @@ console.log(
     return `Highest: ${highest}. Lowest: ${lowest}.`;
   })()
 );
+
+// 6
+console.log(
+  Object.entries(products).reduce((acc, [index, product]) => {
+    acc[index] = { name: product.product, cost: product.price };
+    return acc;
+  }, {})
+);
