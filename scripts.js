@@ -42,3 +42,7 @@ console.log(upperProvinces);
 // 3
 const nameLengths = names.map((name) => name.length);
 console.log(nameLengths);
+
+// 4
+const sortedProvinces = [...provinces].sort(); // Using spread operator to avoid mutating the original array.
+console.log(sortedProvinces);
