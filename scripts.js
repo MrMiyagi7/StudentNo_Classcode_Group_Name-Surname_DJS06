@@ -81,3 +81,6 @@ console.log(
     .map((product) => ({ ...product, price: Number(product.price) })) // Convert valid prices to numbers
     .reduce((total, product) => total + product.price, 0) // Calculate total price
 );
+
+// 4
+console.log(products.reduce((acc, product) => acc + product.product, ""));
