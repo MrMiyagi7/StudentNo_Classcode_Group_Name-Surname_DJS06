@@ -84,3 +84,18 @@ console.log(
 
 // 4
 console.log(products.reduce((acc, product) => acc + product.product, ""));
+
+// 5
+console.log(
+  (() => {
+    const pricedProducts = products
+      .filter(
+        (product) =>
+          String(product.price).trim() !== "" && !isNaN(product.price)
+      )
+      .map((product) => ({ ...product, price: Number(product.price) }));
+    const highest = Math.max(...pricedProducts.map((product) => product.price));
+    const lowest = Math.min(...pricedProducts.map((product) => product.price));
+    return `Highest: ${highest}. Lowest: ${lowest}.`;
+  })()
+);
